@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f6fa;
+    color: #243447;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #123b40;
+    color: white;
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation - Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #6ee7d2;
+}
+
+/* Main layout - CSS Grid */
+.layout {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* Welcome section */
+.welcome {
+    background-color: #dff4f0;
+    padding: 35px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    color: #123b40;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.welcome p {
+    color: #52676b;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #12676c;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #0d5055;
+}
+
+/* Course cards */
+.courses h2,
+.sidebar h2,
+.about h2 {
+    color: #123b40;
+    margin-top: 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e8ec;
+    box-shadow: 0 4px 12px rgba(25, 55, 65, 0.06);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(25, 55, 65, 0.12);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #12676c;
+    margin: 0 0 10px;
+}
+
+.card p {
+    color: #64747b;
+    font-size: 14px;
+}
+
+.card a {
+    color: #12676c;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e8ec;
+}
+
+.side-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e6edef;
+}
+
+.side-item:last-child {
+    border-bottom: none;
+}
+
+.side-item h3 {
+    color: #12676c;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.side-item p {
+    color: #64747b;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* About section */
+.about {
+    background-color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #64747b;
+}
+
+/* Footer */
+.footer {
+    background-color: #123b40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Tablet болон утасны дэлгэц */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+}
